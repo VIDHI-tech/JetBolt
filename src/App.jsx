@@ -2,7 +2,10 @@
  import Headers from './components/Header';
  import Feature from './components/Feature';
  import DefinJB from './components/DefinJB';
+ import Alpha from './components/Alpha';
+ import Why from './components/Why';
 import {NextUIProvider} from "@nextui-org/react";
+import Tokenomics from './components/Tokenomics';
  
 const App = () => {
   return (
@@ -11,6 +14,9 @@ const App = () => {
         <Home/> 
         <Feature/>
         <DefinJB/>
+        <Why/>
+        <Alpha/>
+        <Tokenomics/>
     </NextUIProvider>
   )
 }

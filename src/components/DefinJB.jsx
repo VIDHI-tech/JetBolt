@@ -18,11 +18,7 @@ const cardsData = [
   },
   {
     title: "The Presale",
-    description: [
-      "Instant Self-Custody",
-      "Audited Contract",
-      "Finished Product",
-    ],
+    description: ["Instant Self-Custody", "Audited Contract", "Finished Product"],
     image: "https://nextui.org/images/card-example-2.jpeg",
   },
   {
@@ -55,7 +51,7 @@ const cardsData = [
 const DefinJB = () => {
   // modal next ui
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [currentIndex, setCurrentIndex] = useState(2);
+  const [currentIndex, setCurrentIndex] = useState(3);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? cardsData.length - 1 : prev - 1));
@@ -67,23 +63,21 @@ const DefinJB = () => {
 
   return (
     <div
-      className="bg-cover bg-center"
+      className="bg-cover bg-center mt-10"
       style={{
         backgroundImage: `url(${vector})`,
       }}
     >
       <div className="container mx-auto py-12 px-6 overflow-hidden">
-        <h1 className="text-white text-3xl font-bold text-center mb-4">
+        <h1 className="text-white text-3xl lg:text-5xl font-bold text-center lg:text-start mb-4">
           What is JetBolt?
         </h1>
-        <p className="text-white text-xl text-center mb-8">
-          JetBrains is a software company that develops intelligent software
-          products for businesses. Their flagship product is IntelliJ IDEA, a
-          powerful IDE for Java development.
+        <p className="text-white text-xl text-center lg:text-start mb-8">
+        JetBolt provides an invisible layer between applications and the blockchain. Discover some of the amazing features packed into this lightning fast new token.
         </p>
 
         {/* Cards Section */}
-        <div className="relative items-center">
+        <div className="relative items-center mb-10">
           <div className="flex items-center gap-3 overflow-hidden w-full justify-center">
             {cardsData.map((card, index) => {
               const isFocused = index === currentIndex;
@@ -123,24 +117,25 @@ const DefinJB = () => {
 
           <div className="absolute flex justify-between w-full top-40">
             <button
-              className="bg-yellow-400 px-3 py-3- rounded-lg shadow-md hover:bg-yellow-500"
+              className="bg-yellow-300 px-3 py-3- rounded-lg shadow-md hover:bg-yellow-500"
               onClick={handlePrev}
             >
               ◀
             </button>
             <button
-              className="isIconOnly bg-yellow-400 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
+              className="isIconOnly bg-yellow-300 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
               onClick={handleNext}
             >
               ▶
             </button>
           </div>
+        </div>
 
-          <Button className="bg-yellow-400" onPress={onOpen}>
-            Open Modal
+        <Button className="bg-yellow-300 -ml-24 -right-1/2 px-14 py-6 font-bold text-xl" onPress={onOpen}>
+            BUY NOW
           </Button>
           <Modal
-            backdrop="opaque"
+            backdrop="blur"
             classNames={{
               body: "py-6",
               backdrop: "bg-[#292f46]/50 backdrop-opacity-40",
@@ -189,7 +184,7 @@ const DefinJB = () => {
                       Close
                     </Button>
                     <Button
-                      className="bg-yellow-400 shadow-lg shadow-indigo-500/20"
+                      className="bg-yellow-300 shadow-lg shadow-indigo-500/20"
                       onPress={onClose}
                     >
                       Action
@@ -199,7 +194,6 @@ const DefinJB = () => {
               )}
             </ModalContent>
           </Modal>
-        </div>
       </div>
     </div>
   );
