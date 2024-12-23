@@ -58,7 +58,7 @@ const Why = () => {
   ];
 
   return (
-    <div className="text-white flex flex-col items-center py-10">
+    <div className="text-white flex flex-col items-center py-20">
       <h1 className="text-5xl font-bold mb-8">Why JetBolt?</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -68,7 +68,7 @@ const Alpha = () => {
         backgroundImage: `url(${vector})`,
       }}
     >
-      <div className="container mx-auto py-12 px-6 ">
+      <div className="container mx-auto py-12 px-6 lg:px-60">
         <h1 className="text-white text-3xl lg:text-5xl font-bold text-center lg:text-start mb-4">
           Alpha Boxes
         </h1>

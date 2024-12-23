@@ -1,0 +1,6 @@
+.left-box{
+    height: 10px;
+    left: calc(50% - 5px);
+    width: 10px;
+    background-color: red;
+}

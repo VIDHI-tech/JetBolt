@@ -83,23 +83,23 @@ import {
 
 const ModalButton = ({
   buttonText = "Open Modal",
-  buttonStyles = "bg-yellow-300 px-10 py-6 font-bold text-xl",
+  buttonStyles = "bg-color-2 px-10 py-6 font-bold text-xl",
   modalTitle = "Modal Title",
   modalContent = "This is the default content for the modal. Replace it with your own text or elements.",
   modalFooterActionText = "Action",
   modalFooterCloseText = "Close",
   onAction = () => {},
+  onClick = null,
   modalClassNames = {},
   buttonPosition = "",
-}) => {
-  // Modal state management using Next UI's `useDisclosure`
+}) => { 
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <>
       <Button
         className={`${buttonStyles} ${buttonPosition}`}
-        onPress={onOpen}
+        onClick={onClick || onOpen} // Use onClick if provided, otherwise open modal
       >
         {buttonText}
       </Button>

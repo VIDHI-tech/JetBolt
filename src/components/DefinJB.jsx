@@ -9,6 +9,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const cardsData = [
   {
@@ -49,7 +50,6 @@ const cardsData = [
 ];
 
 const DefinJB = () => {
-  // modal next ui
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [currentIndex, setCurrentIndex] = useState(3);
 
@@ -68,7 +68,7 @@ const DefinJB = () => {
         backgroundImage: `url(${vector})`,
       }}
     >
-      <div className="container mx-auto py-12 px-6 overflow-hidden">
+      <div className="container mx-auto py-12 px-6 lg:px-60 overflow-hidden">
         <h1 className="text-white text-3xl lg:text-5xl font-bold text-center lg:text-start mb-4">
           What is JetBolt?
         </h1>
@@ -86,15 +86,15 @@ const DefinJB = () => {
               return (
                 <div
                   key={index}
-                  className={`bg-[#18232C] text-center flex-shrink-0 w-60 rounded-xl transition-all duration-300 shadow-lg pt-8 ${
+                  className={`bg-[#18232C] text-white text-center flex-shrink-0 w-60 rounded-xl transition-all duration-300 shadow-lg pt-8 ${
                     isFocused
-                      ? "border-2 border-yellow-500"
+                      ? "border-2 border-color-2"
                       : isSideCard
                       ? "bg-[#142029] opacity-80 scale-90"
                       : "opacity-0 scale-95 hidden"
                   }`}
                 >
-                  <h3 className="text-2xl font-bold ">{card.title}</h3>
+                  <h3 className="text-2xl font-bold">{card.title}</h3>
                   <img
                     src={card.image}
                     alt={card.title}
@@ -117,21 +117,21 @@ const DefinJB = () => {
 
           <div className="absolute flex justify-between w-full top-40">
             <button
-              className="bg-yellow-300 px-3 py-3- rounded-lg shadow-md hover:bg-yellow-500"
+              className="bg-color-2 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
               onClick={handlePrev}
             >
-              ◀
+              <FaArrowLeft/>
             </button>
             <button
-              className="isIconOnly bg-yellow-300 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
+              className="isIconOnly bg-color-2 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
               onClick={handleNext}
             >
-              ▶
+              <FaArrowRight/>
             </button>
           </div>
         </div>
 
-        <Button className="bg-yellow-300 -ml-24 -right-1/2 px-14 py-6 font-bold text-xl" onPress={onOpen}>
+        <Button className="bg-color-2 -ml-24 -right-1/2 px-14 py-6 font-bold text-xl" onPress={onOpen}>
             BUY NOW
           </Button>
           <Modal
