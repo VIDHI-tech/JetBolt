@@ -102,7 +102,7 @@ const BuyCoin = () => {
               You Receive:
             </label>
              <div className="flex p-2 rounded-md text-white w-full border border-color-4 justify-between items-center">
-                <img src="/public/logo.png" alt="" className="h-10"/>
+                <img src="/logo.png" alt="" className="h-10"/>
              <p className="">
               25792.25 JBOLT
             </p>
