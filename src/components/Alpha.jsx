@@ -9,6 +9,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const cardsData = [
   {
@@ -105,7 +106,7 @@ const Alpha = () => {
                       <li
                         key={idx}
                         className={`h-9 w-[95%] bg-black flex items-center justify-center ${
-                          idx === 1 ? "text-red-500  rounded-b-xl" : idx === 2 ? "text-green-500 font-semibold my-3 rounded-t-xl rounded-b-xl" : "text-white font-bold text-2xl rounded-t-xl"
+                          idx === 1 ? "text-red-500 line-through rounded-b-xl" : idx === 2 ? "text-green-500 font-semibold my-3 rounded-t-xl rounded-b-xl" : "text-white font-bold text-2xl rounded-t-xl"
                         }`}
                       >
                         {desc}
@@ -119,21 +120,21 @@ const Alpha = () => {
 
           <div className="absolute flex justify-between w-full top-40">
             <button
-              className="bg-yellow-300 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
+              className="bg-color-2 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
               onClick={handlePrev}
             >
-              ◀
+              <FaArrowLeft/>
             </button>
             <button
-              className="bg-yellow-300 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
+              className="bg-color-2 px-3 py-3 rounded-lg shadow-md hover:bg-yellow-500"
               onClick={handleNext}
             >
-              ▶
+              <FaArrowRight/>
             </button>
           </div>
         </div>
 
-        <Button className="bg-yellow-300 -ml-28 -right-1/2 px-10 py-6 font-bold text-xl" onPress={onOpen}>
+        <Button className="bg-color-2 -ml-28 -right-1/2 px-10 py-6 font-bold text-xl" onPress={onOpen}>
           BUY ALPHA BOX 
         </Button>
         <Modal
@@ -172,7 +173,7 @@ const Alpha = () => {
                     Close
                   </Button>
                   <Button
-                    className="bg-yellow-300 shadow-lg shadow-indigo-500/20"
+                    className="bg-color-2 shadow-lg shadow-indigo-500/20"
                     onPress={onClose}
                   >
                     Action

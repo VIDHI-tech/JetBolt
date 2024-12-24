@@ -184,7 +184,7 @@ const DefinJB = () => {
                       Close
                     </Button>
                     <Button
-                      className="bg-yellow-300 shadow-lg shadow-indigo-500/20"
+                      className="bg-color-2 shadow-lg shadow-indigo-500/20"
                       onPress={onClose}
                     >
                       Action
