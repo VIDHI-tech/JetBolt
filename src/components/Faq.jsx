@@ -6,8 +6,8 @@ const Faq = () => {
 
   return (
     <>
-        <h1 className="text-5xl font-bold pb-8 pt-28 text-center lg:text-left text-white">FAQ</h1>
-        <section className="flex flex-col-reverse items-center lg:items-start lg:flex-row gap-4 lg:justify-between">
+        <h1 className="text-5xl font-bold pb-8 pt-28 text-center lg:text-left">FAQ</h1>
+        <section className="flex flex-col-reverse items-center lg:items-start lg:flex-row gap-4 lg:justify-between text-white">
           <Accordion variant="bordered" className="bg-n-8 rounded-none text-xl px-0">
             <AccordionItem key="1" aria-label="Accordion 1" title={<span className="text-white text-xl">What is the JetBolt token at presale?</span>} className="hover:bg-sky-950 border-b-1 border-color-6 border-r-1 border-l-1 border-t-1 px-4">
               {defaultContent}
