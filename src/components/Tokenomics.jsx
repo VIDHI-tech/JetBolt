@@ -58,7 +58,7 @@ const Tokenomics = () => {
       <div className="bg-gray-800 text-white flex flex-col lg:flex-row justify-center items-center py-14">
         {/* Left Content */}
         <div className="px-3 lg:px-8 lg:py-20 items-center lg:w-full">
-          <h1 className="text-3xl lg:text-5xl font-bold text-center lg:text-start pb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-center lg:text-start pb-4">
             Tokenomics
           </h1>
           <p className="text-xl text-center lg:text-start pb-8 justify-center">
@@ -87,6 +87,7 @@ const Tokenomics = () => {
             src="/Gif.gif" 
             alt="hero" 
             className="px-5"
+            loading="lazy"
           />
         </div>
 

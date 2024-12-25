@@ -16,16 +16,16 @@ const App = () => {
     <NextUIProvider className="bg-n-8">
       <Headers />
       <Home />
-      <div className="lg:px-[calc(50%-500px)]">
+      <div className="lg:px-[calc(50%-600px)]">
         <Feature />
       </div>
       <DefinJB />
-      <div className="lg:px-[calc(50%-500px)]">
+      <div className="lg:px-[calc(50%-600px)]">
         <LiveSale />
         <Why />
       </div>
       <Alpha />
-      <div className="lg:px-[calc(50%-500px)]">
+      <div className="lg:px-[calc(50%-600px)]">
         <Tokenomics />
         <Develop />
         <Faq />

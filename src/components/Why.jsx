@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaBolt, FaWallet, FaWrench, FaRobot, FaCoins, FaGasPump, FaCode, FaLock } from "react-icons/fa";
+import { FaBolt, FaWallet, FaRobot, FaGasPump, FaCode, FaLock } from "react-icons/fa";
+import { FaScrewdriverWrench, FaSackDollar } from "react-icons/fa6";
 import ModalButton from "./design/ModalButton";
 
 const Why = () => {
@@ -11,37 +12,37 @@ const Why = () => {
       title: "Zero-Gas",
       description:
         "JetBolt is changing the game by pioneering a cryptocurrency with no gas or transaction fees.",
-      icon: <div className="bg-black p-4 rounded-lg inline-block"><FaGasPump className="text-4xl text-color-2 mb-4" /></div>,
+      icon: <div className="bg-black p-5 rounded-lg inline-block"><FaGasPump className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Lightning Fast",
       description:
         "Tired of waiting for slow transactions? JetBolt leverages Skale network to provide instant finality.",
-      icon: <div className="bg-black p-4 rounded-lg inline-block"> <FaBolt className="text-4xl text-color-2 mb-4" /></div>,
+      icon: <div className="bg-black p-5 rounded-lg inline-block"> <FaBolt className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Easy To Earn",
       description:
         "Earning crypto has never been this easy. JetBolt rewards the most active community members.",
-      icon: <div className="bg-black p-4 rounded-lg inline-block"><FaCoins className="text-4xl text-color-2 mb-4" /></div>,
+      icon: <div className="bg-black p-5 rounded-lg inline-block"><FaSackDollar className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Finished Product",
       description:
         "JetBolt's ecosystem and features are already completed, audited, and available from day one!",
-      icon:<div className="bg-black p-4 rounded-lg inline-block"> <FaWrench className="text-4xl text-color-2 mb-4" /></div>,
+      icon:<div className="bg-black p-5 rounded-lg inline-block"> <FaScrewdriverWrench className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Custom Wallet",
       description:
         "JetBolt has its own purpose-built web wallet. It's so easy to use, even your grandma can use it.",
-      icon:<div className="bg-black p-4 rounded-lg inline-block"> <FaWallet className="text-4xl text-color-2 mb-4" /></div>,
+      icon:<div className="bg-black p-5 rounded-lg inline-block"> <FaWallet className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "AI Features",
       description:
         "JetBolt leverages the power of AI to deliver curated news and insights, enhancing the experience.",
-      icon:<div className="bg-black p-4 rounded-lg inline-block"> <FaRobot className="text-4xl text-color-2 mb-4" /></div>,
+      icon:<div className="bg-black p-5 rounded-lg inline-block"> <FaRobot className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Developer Friendly",
@@ -65,13 +66,13 @@ const Why = () => {
         {cards.slice(0, showMore ? cards.length : 4).map((card, index) => (
           <div
             key={index}
-            className="rounded-lg shadow-lg p-6 transform transition-transform hover:-translate-y-2 text-center bg-gray-800"
+            className="rounded-lg shadow-lg py-6 transform transition-transform hover:-translate-y-2 text-center"
           >
             {card.icon}
-            <h2 className="text-xl font-semibold text-color-2 mb-3">
+            <h2 className="text-xl lg:text-2xl font-bold text-color-2 mb-3">
               {card.title}
             </h2>
-            <p>{card.description}</p>
+            <p className="text-xl">{card.description}</p>
           </div>
         ))}
       </div>

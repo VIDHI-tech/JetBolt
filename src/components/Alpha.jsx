@@ -1,4 +1,4 @@
-import vector from "../assets/Vector.svg";
+import vector from "/Vector.svg";
 import React, { useState } from "react";
 import {
   Modal,
@@ -15,7 +15,7 @@ const cardsData = [
   {
     title: "Token Vault",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "https://nextui.org/images/card-example-1.jpeg",
+    image: "/public/services/service-1.png",
   },
   {
     title: "Decentralized Finance",
@@ -25,17 +25,17 @@ const cardsData = [
   {
     title: "NFT Marketplace",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "https://nextui.org/images/card-example-3.jpeg",
+    image: "/public/services/service-3.png",
   },
   {
     title: "Crypto Wallet",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "https://nextui.org/images/hero-card-complete.jpeg",
+    image: "/public/services/service-1.png",
   },
   {
     title: "Staking Rewards",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "https://nextui.org/images/album-cover.png",
+    image: "/public/services/service-2.png",
   },
   {
     title: "Cross-Chain Trading",
@@ -69,11 +69,11 @@ const Alpha = () => {
         backgroundImage: `url(${vector})`,
       }}
     >
-      <div className="container mx-auto py-12 px-6 lg:px-60">
+      <div className="container mx-auto py-12 px-6 lg:px-[calc(50%-780px)]">
         <h1 className="text-white text-3xl lg:text-5xl font-bold text-center lg:text-start mb-4">
           Alpha Boxes
         </h1>
-        <p className="text-white text-xl text-center lg:text-start mb-8">
+        <p className="text-white text-xl lg:text-2xl text-center lg:text-start mb-8">
           Benefit from our discounted pricing by purchasing an Alpha Box. Each Alpha Box has discounted pricing, ensuring you get more bang for your buck.
         </p>
 
@@ -106,7 +106,7 @@ const Alpha = () => {
                       <li
                         key={idx}
                         className={`h-9 w-[95%] bg-black flex items-center justify-center ${
-                          idx === 1 ? "text-red-500 line-through rounded-b-xl" : idx === 2 ? "text-green-500 font-semibold my-3 rounded-t-xl rounded-b-xl" : "text-white font-bold text-2xl rounded-t-xl"
+                          idx === 1 ? "text-red-500 line-through rounded-b-xl" : idx === 2 ? "text-green-500 font-bold my-3 rounded-t-xl rounded-b-xl" : "text-white font-bold text-3xl rounded-t-xl"
                         }`}
                       >
                         {desc}

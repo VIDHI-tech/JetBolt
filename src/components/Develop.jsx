@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "prismjs/themes/prism-tomorrow.css";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
-import vector from "../assets/Vector.svg";
+import vector from "/Vector.svg"
 import ModalButton from "./design/ModalButton";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Develop = () => {
   const codeSnippet = ` import { JetBolt, useJetBolt } from "JetBolt";
@@ -73,7 +74,7 @@ export default Parent_Object;`;
   }, [codeSnippet]);
 
   return (
-    <section className="relative flex flex-col lg:flex-row text-white bg-black mt-20 border border-color-6">
+    <section className="relative flex flex-col lg:flex-row text-white mt-20 border border-color-6">
       {/* Code Block */}
       <div className="w-full lg:w-1/2 text-xs text-center">
         <h1 className="text-4xl font-bold border-b-1 border-color-6 py-7">
@@ -109,8 +110,8 @@ export default Parent_Object;`;
             Don’t miss the chance to build the next generation of gas-free
             blockchain applications.
           </p>
-          <a href="#" className="text-color-2 underline block">
-            Get started now
+          <a href="#" className="underline flex">
+            <FaLongArrowAltRight/> Get started now
           </a>
         </div>
         <div className="p-10 space-y-4">

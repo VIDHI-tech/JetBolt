@@ -7,7 +7,7 @@ export default function Header() {
     <Navbar shouldHideOnScroll isBordered className="text-white border-b-1 border-n-1 py-2 bg-transparent">
       <NavbarBrand>
         <img src="/logo.png"/>
-        <p className="font-bold pl-3 text-4xl text-inherit text-white">JetBolt</p>
+        <p className="font-bold pl-3 text-2xl md:text-4xl text-inherit text-white">JetBolt</p>
       </NavbarBrand> 
       <NavbarContent justify="end">
         <NavbarItem>

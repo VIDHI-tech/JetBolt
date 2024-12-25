@@ -1,4 +1,4 @@
-import vector from "../assets/Vector.svg";
+import vector from "/Vector.svg"
 import React, { useState } from "react";
 import {
   Modal,
@@ -68,11 +68,11 @@ const DefinJB = () => {
         backgroundImage: `url(${vector})`,
       }}
     >
-      <div className="container mx-auto py-12 px-6 lg:px-60 overflow-hidden">
+      <div className="container mx-auto py-12 px-6 lg:px-[calc(50%-780px)] overflow-hidden">
         <h1 className="text-white text-3xl lg:text-5xl font-bold text-center lg:text-start mb-4">
           What is JetBolt?
         </h1>
-        <p className="text-white text-xl text-center lg:text-start mb-8">
+        <p className="text-white text-xl lg:text-2xl text-center lg:text-start mb-8">
         JetBolt provides an invisible layer between applications and the blockchain. Discover some of the amazing features packed into this lightning fast new token.
         </p>
 
