@@ -10,7 +10,7 @@ const Feature = () => {
   ];
 
   return (
-    <div className="w-full text-white overflow-hidden"> 
+    <div className="w-full text-white overflow-hidden -mt-48 md:mt-0"> 
       <h2 className="text-3xl font-bold text-center pb-6">
         Featured In
       </h2>

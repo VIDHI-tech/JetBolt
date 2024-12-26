@@ -6,6 +6,7 @@ import { FaEthereum } from "react-icons/fa";
 import { SiBinance, SiSolana, SiTether } from "react-icons/si"; 
 import { LuBitcoin } from "react-icons/lu";
 import { RiExchangeDollarFill } from "react-icons/ri";
+import { SlArrowDown } from "react-icons/sl";
 
 const BuyCoin = () => {
   const [selectedCard, setSelectedCard] = useState("card");  
@@ -106,23 +107,23 @@ const BuyCoin = () => {
           ))}
         </div>
 
-        <div className="flex flex-col justify-between mb-4 text-start">
+        <div className="flex flex-col justify-between mb-4 text-start gap-2">
           <label htmlFor="payment" className="font-medium">
             You Pay:
           </label>
           <div className="flex p-2 rounded-md text-white w-full border border-color-4">
-            {cardOptions.find((card) => card.id === selectedCard)?.icon}
+            <span className="flex items-center gap-2 bg-color-4 rounded-md p-1">{cardOptions.find((card) => card.id === selectedCard)?.icon} <SlArrowDown/></span>
             <input
               type="number"
               id="payment"
-              className="w-full justify-items-end ml-5" 
-              placeholder="                                                       250"
+              className="w-full justify-items-end ml-5 " 
+              placeholder="                                             250"
             />
             <span className="text-color-6 text-xl">USD</span>
           </div>
         </div>
 
-        <div className="flex flex-col justify-between mb-6">
+        <div className="flex flex-col justify-between mb-6 gap-2">
           <label htmlFor="receive" className="font-medium text-start">
             You Receive:
           </label>
@@ -146,10 +147,10 @@ const BuyCoin = () => {
           </span>
           <ModalButton
             buttonText="BUY NOW"
-            buttonStyles="bg-color-2 text-black w-full font-bold mt-4 py-7 font-bold text-2xl"
+            buttonStyles="bg-color-2 text-black w-full font-bold mt-4 py-8 font-bold text-3xl"
           />
-          <p className="text-sm mt-4 text-green-400">You get 10% extra free tokens!</p>
-          <p className="text-xs">Buy over $500 (0.001 ETH) and get 15% extra tokens</p>
+          <p className="text-xs pt-4 text-green-400">You get 10% extra free tokens!</p>
+          <p className="text-xs pt-2">Buy over $500 (0.001 ETH) and get 15% extra tokens</p>
         </div>
         <Progress
           isStriped
@@ -158,7 +159,7 @@ const BuyCoin = () => {
           color="warning"
           value={80}
         />
-        <p className="text-xs text-center">Full Discount Chart</p>
+        <p className="text-sm text-center underline">Full Discount Chart</p>
       </div>
     </div>
   );
