@@ -15,7 +15,7 @@ const cardsData = [
   {
     title: "Token Vault",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "/public/services/service-1.png",
+    image: "/services/service-1.png",
   },
   {
     title: "Decentralized Finance",
@@ -25,17 +25,17 @@ const cardsData = [
   {
     title: "NFT Marketplace",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "/public/services/service-3.png",
+    image: "/services/service-3.png",
   },
   {
     title: "Crypto Wallet",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "/public/services/service-1.png",
+    image: "/services/service-1.png",
   },
   {
     title: "Staking Rewards",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "/public/services/service-2.png",
+    image: "/services/service-2.png",
   },
   {
     title: "Cross-Chain Trading",
