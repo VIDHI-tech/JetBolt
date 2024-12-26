@@ -1,5 +1,5 @@
 
-import hero from "../../public/services/service-3.png" 
+import hero from "/services/service-3.png" 
 import BuyCoin from "./BuyCoin";
 
 const Home = () => {
