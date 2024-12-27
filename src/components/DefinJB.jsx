@@ -15,7 +15,7 @@ const cardsData = [
   {
     title: "Token Swap",
     description: ["Instant Conversion", "Low Fees", "Fast Transactions"],
-    image: "/public/c1.png",
+    image: "/c1.png",
   },
   {
     title: "Stake & Earn",
