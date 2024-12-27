@@ -17,11 +17,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto items-center gap-5 flex flex-col lg:flex-row justify-around">
         <div className="my-6 space-y-4 text-center lg:text-start">
           <h2 className="text-4xl font-bold flex gap-4">
-            <img src="/logo.png" />
-            JetBolt
+            <img src="/logo.png"  alt="logo" className="w-10 h-10 lg:w-20 lg:h-20 rounded-lg" />
+            CatBolt
           </h2>
           <p className=" text-xl">Powering Next Gen Crypto</p>
-          <p className=" text-base">&copy; JetBolt Copyright 2024</p>
+          <p className=" text-base">&copy; CatBolt Copyright 2024</p>
           <p className="text-base">All Rights Reserved</p>
         </div>
 

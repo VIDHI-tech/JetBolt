@@ -25,8 +25,8 @@ const LiveSale = () => {
             Live Sales
           </h1>
           <p className="text-xl text-center lg:text-start pb-8 justify-center">
-            You can purchase JetBolt tokens with a wide range of payment
-            options. Join the growing number of early adopters on the JetBolt
+            You can purchase CatBolt tokens with a wide range of payment
+            options. Join the growing number of early adopters on the CatBolt
             ecosystem.
           </p>
           <span className="flex justify-center gap-4 lg:justify-start">
@@ -59,7 +59,7 @@ const LiveSale = () => {
       <div className="text-white flex flex-col lg:flex-row justify-center items-center py-14 border-t-1 border-black">
         <div className="lg:w-full flex justify-center items-center">
           <Image
-            src="/coin.png" 
+            src="/c2.png" 
             alt="hero"
             className="px-5"
             loading="lazy"
@@ -68,10 +68,10 @@ const LiveSale = () => {
 
         <div className="lg:border-l-1 border-black px-3 lg:px-10 lg:ml-9 lg:py-20 items-center pt-20 lg:w-full">
           <h1 className="text-3xl lg:text-5xl font-bold text-center lg:text-start pb-4">
-            JetBolt Staking
+            CatBolt Staking
           </h1>
           <p className="text-xl text-center lg:text-start pb-8 justify-center">
-            JetBolt has created an awesome new staking system that rewards users
+            CatBolt has created an awesome new staking system that rewards users
             who participate the most.
           </p>
           <span className="flex justify-center gap-4 lg:justify-start">

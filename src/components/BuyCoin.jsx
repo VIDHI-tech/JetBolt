@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Checkbox, Progress } from "@nextui-org/react";
 import ModalButton from "./design/ModalButton";
 import { FaCreditCard } from "react-icons/fa6";
-import { FaEthereum } from "react-icons/fa";  
-import { SiBinance, SiSolana, SiTether } from "react-icons/si"; 
+import { FaEthereum } from "react-icons/fa";
+import { SiBinance, SiSolana, SiTether } from "react-icons/si";
 import { LuBitcoin } from "react-icons/lu";
 import { RiExchangeDollarFill } from "react-icons/ri";
 import { SlArrowDown } from "react-icons/sl";
 
 const BuyCoin = () => {
-  const [selectedCard, setSelectedCard] = useState("card");  
+  const [selectedCard, setSelectedCard] = useState("card");
+  const [youPay, setYouPay] = useState(250);
+  const [youReceive, setYouReceive] = useState(25680.88);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 20,
@@ -17,15 +20,73 @@ const BuyCoin = () => {
     seconds: 59,
   });
 
+  const rates = {
+    card: 93.39,
+    eth: 377737.47,
+    btc: 11170130.04,
+    sol: 18608.74,
+    bnb: 74800.12,
+    usdt: 93.39,
+    usdc: 93.39,
+  };
+
   const cardOptions = [
-    { id: "card", icon: <FaCreditCard className="text-color-1 w-7 h-7" />, label: "Card" },
-    { id: "eth", icon: <FaEthereum className="bg-purple-500 rounded-2xl w-7 h-7 p-1" />, label: "ETH" },
-    { id: "btc", icon: <LuBitcoin className="bg-orange-500 rounded-2xl w-7 h-7" />, label: "BTC" },
-    { id: "sol", icon: <SiSolana className="bg-[#66F9A1] rounded-2xl w-7 h-7 p-1"/>, label: "SOL" },
-    { id: "bnb", icon: <SiBinance className="bg-[#F3BA2F] rounded-2xl w-7 h-7 p-1" />, label: "BNB" },
-    { id: "usdt", icon: <SiTether className="bg-[#26A178] rounded-2xl w-7 h-7 p-1" />, label: "USDT" },
-    { id: "usdc", icon: <RiExchangeDollarFill className="bg-[#3E73C4] rounded-2xl w-7 h-7 p-1" />, label: "USDC" },
+    {
+      id: "card",
+      icon: <FaCreditCard className="text-color-1 w-7 h-7" />,
+      label: "Card",
+    },
+    {
+      id: "eth",
+      icon: <FaEthereum className="bg-purple-500 rounded-2xl w-7 h-7 p-1" />,
+      label: "ETH",
+    },
+    {
+      id: "btc",
+      icon: <LuBitcoin className="bg-orange-500 rounded-2xl w-7 h-7" />,
+      label: "BTC",
+    },
+    {
+      id: "sol",
+      icon: <SiSolana className="bg-[#66F9A1] rounded-2xl w-7 h-7 p-1" />,
+      label: "SOL",
+    },
+    {
+      id: "bnb",
+      icon: <SiBinance className="bg-[#F3BA2F] rounded-2xl w-7 h-7 p-1" />,
+      label: "BNB",
+    },
+    {
+      id: "usdt",
+      icon: <SiTether className="bg-[#26A178] rounded-2xl w-7 h-7 p-1" />,
+      label: "USDT",
+    },
+    {
+      id: "usdc",
+      icon: (
+        <RiExchangeDollarFill className="bg-[#3E73C4] rounded-2xl w-7 h-7 p-1" />
+      ),
+      label: "USDC",
+    },
   ];
+
+  // Update "You Receive" value based on selected card and input amount
+  const updateYouReceive = (payAmount) => {
+    const rate = rates[selectedCard] || 0;
+    setYouReceive(payAmount * rate);
+  };
+
+  // Handle "You Pay" input change
+  const handleYouPayChange = (value) => {
+    setYouPay(value);
+    updateYouReceive(value);
+  };
+
+  // Handle card selection
+  const handleCardSelection = (cardId) => {
+    setSelectedCard(cardId);
+    updateYouReceive(youPay); // Recalculate "You Receive" based on the new card's rate
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -58,10 +119,12 @@ const BuyCoin = () => {
   }, []);
 
   return (
-    <div className="lg:w-1/3 h-fit lg:mt-11 flex justify-center border-color-2 border-2 rounded-lg mx-2 md:mx-auto">
-      <div className="py-3 shadow-lg w-full max-w-sm text-center px-3 xl:px-0">
-        <h2 className="text-4xl font-bold">BUY COIN</h2>
-        <p className="text-lg text-[#00CFFF] font-extrabold">US$1,820,818 SOLD</p>
+    <div className="h-fit flex justify-center border-color-2 border rounded-lg mt-3 mx-1 lg:px-6">
+      <div className="py-3 shadow-lg w-full max-w-sm text-center px-3">
+        <h2 className="text-3xl font-bold tracking-wider">BUY COIN</h2>
+        <p className="text-lg text-[#00CFFF] font-extrabold tracking-wider">
+          US$2,006,634 SOLD
+        </p>
 
         <div className="flex flex-col justify-center items-center my-7 gap-2 h-32 bg-color-4 rounded-lg">
           <span className="text-lg text-white">Price Increase In</span>
@@ -100,9 +163,10 @@ const BuyCoin = () => {
               className={`p-3 rounded-md bg-color-4 hover:bg-color-3 flex justify-center items-center gap-2 ${
                 selectedCard === option.id ? "border border-color-2" : ""
               }`}
-              onClick={() => setSelectedCard(option.id)}
+              onClick={() => handleCardSelection(option.id)}
             >
-              {option.icon}{option.label}
+              {option.icon}
+              {option.label}
             </button>
           ))}
         </div>
@@ -111,13 +175,45 @@ const BuyCoin = () => {
           <label htmlFor="payment" className="font-medium">
             You Pay:
           </label>
-          <div className="flex p-2 rounded-md text-white w-full border border-color-4">
-            <span className="flex items-center gap-2 bg-color-4 rounded-md p-1">{cardOptions.find((card) => card.id === selectedCard)?.icon} <SlArrowDown/></span>
+          <div className="flex p-2 rounded-md text-white w-full border border-color-4 relative">
+            <ModalButton 
+              buttonText={
+                cardOptions.find((card) => card.id === selectedCard)?.icon 
+              }
+              buttonStyles="flex items-center gap-2 bg-color-4 rounded-md p-1 text-white"
+              isOpen={isModalOpen}
+              modalTitle="Select Currency"
+              onClose={() => setIsModalOpen(false)}
+              modalContent={
+                <div className="flex flex-col gap-4">
+                  {cardOptions.map((option) => (
+                    <button
+                      key={option.id}
+                      className={`p-3 rounded-md bg-color-4 hover:bg-color-3 flex items-center gap-2 ${
+                        selectedCard === option.id
+                          ? "border border-color-2"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        handleCardSelection(option.id);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      {option.icon}
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+              }
+              modalFooterCloseText=""
+            />
             <input
               type="number"
               id="payment"
-              className="w-full justify-items-end ml-5 " 
-              placeholder="                                             250"
+              value={youPay}
+              onChange={(e) => handleYouPayChange(Number(e.target.value))}
+              className="w-full justify-items-end ml-5"
+              placeholder="250"
             />
             <span className="text-color-6 text-xl">USD</span>
           </div>
@@ -129,14 +225,17 @@ const BuyCoin = () => {
           </label>
           <div className="flex p-2 rounded-md text-white w-full border border-color-4 justify-between items-center">
             <img src="/logo.png" alt="" className="h-10" />
-            <p>25792.25 <span className="text-color-6">JBOLT</span></p>
+            <p>
+              {youReceive.toFixed(2)}{" "}
+              <span className="text-color-6">JBOLT</span>
+            </p>
           </div>
         </div>
 
         <div className="text-center">
           <span className="text-base">
-            <Checkbox defaultSelected size="lg" className="text-white" />
-            I agree to the{" "}
+            <Checkbox defaultSelected size="lg" className="text-white" />I agree
+            to the{" "}
             <a href="#term" className="text-white">
               Terms and Conditions
             </a>{" "}
@@ -149,8 +248,10 @@ const BuyCoin = () => {
             buttonText="BUY NOW"
             buttonStyles="bg-color-2 text-black w-full font-bold mt-4 py-8 font-bold text-3xl"
           />
-          <p className="text-xs pt-4 text-green-400">You get 10% extra free tokens!</p>
-          <p className="text-xs pt-2">Buy over $500 (0.001 ETH) and get 15% extra tokens</p>
+          <p className="text-xs pt-4 text-green-400">
+            You get 10% extra free tokens!
+          </p>
+          <p className="text-xs pt-2">Buy over $500 and get 15% extra tokens</p>
         </div>
         <Progress
           isStriped

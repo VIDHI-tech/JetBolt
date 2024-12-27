@@ -11,56 +11,56 @@ const Why = () => {
     {
       title: "Zero-Gas",
       description:
-        "JetBolt is changing the game by pioneering a cryptocurrency with no gas or transaction fees.",
+        "CatBolt is changing the game by pioneering a cryptocurrency with no gas or transaction fees.",
       icon: <div className="bg-black p-5 rounded-lg inline-block"><FaGasPump className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Lightning Fast",
       description:
-        "Tired of waiting for slow transactions? JetBolt leverages Skale network to provide instant finality.",
+        "Tired of waiting for slow transactions? CatBolt leverages Skale network to provide instant finality.",
       icon: <div className="bg-black p-5 rounded-lg inline-block"> <FaBolt className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Easy To Earn",
       description:
-        "Earning crypto has never been this easy. JetBolt rewards the most active community members.",
+        "Earning crypto has never been this easy. CatBolt rewards the most active community members.",
       icon: <div className="bg-black p-5 rounded-lg inline-block"><FaSackDollar className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Finished Product",
       description:
-        "JetBolt's ecosystem and features are already completed, audited, and available from day one!",
+        "CatBolt's ecosystem and features are already completed, audited, and available from day one!",
       icon:<div className="bg-black p-5 rounded-lg inline-block"> <FaScrewdriverWrench className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Custom Wallet",
       description:
-        "JetBolt has its own purpose-built web wallet. It's so easy to use, even your grandma can use it.",
+        "CatBolt has its own purpose-built web wallet. It's so easy to use, even your grandma can use it.",
       icon:<div className="bg-black p-5 rounded-lg inline-block"> <FaWallet className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "AI Features",
       description:
-        "JetBolt leverages the power of AI to deliver curated news and insights, enhancing the experience.",
+        "CatBolt leverages the power of AI to deliver curated news and insights, enhancing the experience.",
       icon:<div className="bg-black p-5 rounded-lg inline-block"> <FaRobot className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Developer Friendly",
       description:
-        "JetBolt has been designed for developers. You can integrate it into your dApp in just a few minutes.",
+        "CatBolt has been designed for developers. You can integrate it into your dApp in just a few minutes.",
       icon:<div className="bg-black p-4 rounded-lg inline-block"> <FaCode className="text-4xl text-color-2 mb-4" /></div>,
     },
     {
       title: "Self Custody",
       description:
-        "There's no TGE and no lockup. You get your JetBolt tokens immediately after purchasing them.",
+        "There's no TGE and no lockup. You get your CatBolt tokens immediately after purchasing them.",
       icon:<div className="bg-black p-4 rounded-lg inline-block"> <FaLock className="text-4xl text-color-2 mb-4" /></div>,
     },
   ];
 
   return (
     <div className="text-white flex flex-col items-center py-20">
-      <h1 className="text-5xl font-bold mb-8">Why JetBolt?</h1>
+      <h1 className="text-5xl font-bold mb-8">Why CatBolt?</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {cards.slice(0, showMore ? cards.length : 4).map((card, index) => (

@@ -4,10 +4,10 @@ import ModalButton from "./design/ModalButton";
 
 export default function Header() {
   return (
-    <Navbar shouldHideOnScroll isBordered className="text-white border-b-1 border-n-1 py-2 bg-transparent">
+    <Navbar shouldHideOnScroll isBordered className="text-white border-b-1 border-n-1 py-2 bg-n-8">
       <NavbarBrand>
-        <img src="/logo.png"/>
-        <p className="font-bold pl-3 text-2xl md:text-4xl text-inherit text-white">JetBolt</p>
+        <img src="/logo.png" alt="logo" className="w-10 h-10 lg:w-20 lg:h-20 object-contain" />
+        <p className="font-bold pl-3 text-2xl md:text-4xl text-inherit text-white">CatBolt</p>
       </NavbarBrand> 
       <NavbarContent justify="end">
         <NavbarItem>

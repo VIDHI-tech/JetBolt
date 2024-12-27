@@ -62,9 +62,9 @@ const Tokenomics = () => {
             Tokenomics
           </h1>
           <p className="text-xl text-center lg:text-start pb-8 justify-center">
-            Explore JetBolt's tokenomics—simple and effective. Our smart
+            Explore CatBolt's tokenomics—simple and effective. Our smart
             contracts are fully audited, enhancing safety and transparency. Dive
-            into our whitepaper to discover more about how JetBolt works.
+            into our whitepaper to discover more about how CatBolt works.
           </p>
           <span className="flex justify-center gap-4 lg:justify-start">
             <ModalButton buttonText="BUY NOW" buttonStyles="bg-color-1 text-white px-8 py-6 font-bold text-xl" />
@@ -84,7 +84,7 @@ const Tokenomics = () => {
       <div className="bg-gray-800 text-white flex flex-col lg:flex-row justify-center items-center py-14 border-t-1 border-black"> 
         <div className=" lg:w-full">
         <Image
-            src="/Gif.gif" 
+            src="/card5.png" 
             alt="hero" 
             className="px-5"
             loading="lazy"
@@ -96,9 +96,9 @@ const Tokenomics = () => {
             How to Buy
           </h1>
           <p className="text-xl text-center lg:text-start pb-8 justify-center">
-            Explore JetBolt's tokenomics—simple and effective. Our smart
+            Explore CatBolt's tokenomics—simple and effective. Our smart
             contracts are fully audited, enhancing safety and transparency. Dive
-            into our whitepaper to discover more about how JetBolt works.
+            into our whitepaper to discover more about how CatBolt works.
           </p>
           <span className="flex justify-center gap-4 lg:justify-start">
             <ModalButton buttonText="BUY NOW" buttonStyles="bg-color-1 text-white px-8 py-6 font-bold text-xl" />

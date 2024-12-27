@@ -7,12 +7,12 @@ import ModalButton from "./design/ModalButton";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Develop = () => {
-  const codeSnippet = ` import { JetBolt, useJetBolt } from "JetBolt";
+  const codeSnippet = ` import { CatBolt, useCatBolt } from "CatBolt";
 import { useEffect } from "react";
 import sample_contract from "sample_contract_path";
 
 function Child_Object {
-  let { is_authorized, wallet_address, request_authorization, call_contract, register_callback } = useJetBolt();
+  let { is_authorized, wallet_address, request_authorization, call_contract, register_callback } = useCatBolt();
 
   function login() {
     request_authorization();
@@ -42,9 +42,9 @@ function Child_Object {
 
 function Parent_Object {
   return (
-    <JetBolt>
+    <CatBolt>
       <Child_Object />
-    </JetBolt>
+    </CatBolt>
   );
 }
 
@@ -78,7 +78,7 @@ export default Parent_Object;`;
       {/* Code Block */}
       <div className="w-full lg:w-1/2 text-xs text-center">
         <h1 className="text-4xl font-bold border-b-1 border-color-6 py-7">
-          Develop on JetBolt
+          Develop on CatBolt
         </h1>
         <div
           style={{
@@ -103,7 +103,7 @@ export default Parent_Object;`;
             Get Started in Minutes
           </h1>
           <p>
-            Our easy-to-integrate library allows developers to build JetBolt
+            Our easy-to-integrate library allows developers to build CatBolt
             dApps in minutes.
           </p>
           <p className="text-gray-400">
@@ -128,7 +128,7 @@ export default Parent_Object;`;
               buttonStyles="bg-transparent hover:bg-gray-700 border border-color-6 text-white px-8 py-6 font-bold text-xl"
               onClick={() =>
                 window.open(
-                  "https://github.com/JetBolt/JetBolt_React",
+                  "https://github.com/CatBolt/CatBolt_React",
                   "_blank"
                 )
               }

@@ -20,7 +20,7 @@ const cardsData = [
   {
     title: "Decentralized Finance",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "https://nextui.org/images/card-example-2.jpeg",
+    image: "/c3.png",
   },
   {
     title: "NFT Marketplace",
@@ -38,14 +38,14 @@ const cardsData = [
     image: "/services/service-2.png",
   },
   {
-    title: "Cross-Chain Trading",
-    description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "https://nextui.org/images/card-example-4.jpeg",
-  },
-  {
     title: "Blockchain Explorer",
     description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
-    image: "https://nextui.org/images/card-example-6.jpeg",
+    image: "/services/service-4.png",
+  },
+  {
+    title: "Cross-Chain Trading",
+    description: ["US$ 500", "US$ 575", "Get 15% Extra Tokens"],
+    image: "/c4.png",
   },
 ];
 
@@ -87,7 +87,7 @@ const Alpha = () => {
               return (
                 <div
                   key={index}
-                  className={`bg-[#18232C] text-center flex-shrink-0 w-60 rounded-xl transition-all duration-300 shadow-lg pt-8 ${
+                  className={`bg-[#18232C] text-center flex-shrink-0 w-72 rounded-xl transition-all duration-300 shadow-lg pt-8 ${
                     isFocused
                       ? "border-2 border-yellow-500"
                       : isSideCard
@@ -99,7 +99,7 @@ const Alpha = () => {
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-64 object-cover my-3"
+                    className="w-full h-72 bject-cover my-3"
                   />
                   <ul className="flex flex-col items-center">
                     {card.description.map((desc, idx) => (
