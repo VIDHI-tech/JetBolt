@@ -11,15 +11,15 @@ const Home = () => {
             backgroundImage: `url(${hero})`,
           }}
         >
-          <div className="px-3 pt-32">
-            <h1 className="text-3xl lg:text-5xl font-bold mb-2 leading-tight bg-slate-800 bg-opacity-70 rounded-lg px-5 py-2 inline-block">
+          <div className="px-3 pt-52 lg:pt-32">
+            <h1 className="text-3xl md:text-5xl font-bold mb-2 leading-tight bg-slate-800 bg-opacity-70 rounded-lg px-5 py-2 inline-block">
               THE <span className="text-[#00CFFF]">AI POWERED</span>
             </h1>
             <br />
-            <h1 className="text-3xl lg:text-5xl font-bold mb-4 leading-tight bg-slate-800 bg-opacity-70 rounded-lg px-5 py-2 inline-block">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight bg-slate-800 bg-opacity-70 rounded-lg px-5 py-2 inline-block">
               CRYPTO COIN
             </h1>
-            <p className="text-lg lg:text-xl font-semibold bg-slate-800 bg-opacity-70 rounded-lg px-5 py-1 mb-1">
+            <p className="text-md md:text-xl font-semibold bg-slate-800 bg-opacity-70 rounded-lg px-5 py-1 mb-1">
               CatBolt aims to power the next generation of crypto apps. 
               Join now and be part of the future of crypto.
             </p>
