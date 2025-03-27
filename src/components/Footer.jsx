@@ -17,15 +17,35 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto items-center gap-5 flex flex-col lg:flex-row justify-around">
         <div className="my-6 space-y-4 text-center lg:text-start">
           <h2 className="text-4xl font-bold flex gap-4">
-            <img src="/logo.png"  alt="logo" className="w-10 h-10 lg:w-20 lg:h-20 rounded-lg" />
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="w-10 h-10 lg:w-20 lg:h-20 rounded-lg"
+            />
             CatBolt
           </h2>
           <p className=" text-xl">Powering Next Gen Crypto</p>
           <p className=" text-base">&copy; CatBolt Copyright 2024</p>
           <p className="text-base">All Rights Reserved</p>
+          <a
+            href="https://palnesto.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="lg:flex hidden"
+          >
+            <img src="/pal-desktop.svg" alt="" className="w-44 h-auto" />
+          </a>
+          <a
+            href="https://palnesto.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex justify-center lg:hidden"
+          >
+            <img src="/palnesto-mobile.svg" alt="" className="w-44 h-auto" />
+          </a>
         </div>
 
-        <div className="flex space-x-7 lg:space-x-40">
+        <div className="flex space-x-10 sm:space-x-20 md:space-x-40">
           <div className="text-center ">
             <h4 className="font-semibold mb-3 bg-color-3 rounded-md py-2">
               JOIN US
@@ -114,20 +134,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
-
-      <div className="mt-8 lg:text-2xl text-gray-400 max-w-5xl mx-auto text-center">
-        <h1>
-          CREATED BY{" "}
-          <a
-            href="https://palnesto.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-color-1 font-extrabold"
-          >
-            PALNESTO
-          </a>
-        </h1>
       </div>
     </footer>
   );
